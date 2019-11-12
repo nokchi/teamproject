@@ -42,10 +42,10 @@ public class GameUi extends JFrame implements MouseListener, MouseMotionListener
 		int x = (int) (width / 2 - 1500 / 2);
 		int y = (int) (height / 2 - 900 / 2);
 
-		add(jbcas);
 		add(jbhero);
-		jbcas.setBounds(0, 0, 865, 623);
+		add(jbcas);
 		jbhero.setBounds(200, -23, 150, 300);
+		jbcas.setBounds(0, 0, 865, 623);
 
 		this.addMouseMotionListener(this);
 		this.addMouseListener(this);
@@ -77,10 +77,9 @@ public class GameUi extends JFrame implements MouseListener, MouseMotionListener
 		Random rnd = new Random();
 		int temp = 0;
 		if (jbhero.getIcon().equals(hero1)) {
-			System.out.println("1");
-//			temp = rnd.nextInt(2);
+			temp = rnd.nextInt(2);
 			System.out.println("temp : " + temp);
-			jbhero.setIcon(icon[0][0]);
+			jbhero.setIcon(icon[0][temp]);
 			try {
 				Thread.sleep(10);
 			} catch (InterruptedException e1) {
@@ -88,11 +87,36 @@ public class GameUi extends JFrame implements MouseListener, MouseMotionListener
 				e1.printStackTrace();
 			}
 		} else if (jbhero.getIcon().equals(hero2)) {
-			System.out.println("2");
+			temp = rnd.nextInt(2);
+			System.out.println("temp : " + temp);
+			jbhero.setIcon(icon[1][temp]);
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
 		} else if (jbhero.getIcon().equals(hero3)) {
-			System.out.println("3");
+			temp = rnd.nextInt(2);
+			System.out.println("temp : " + temp);
+			jbhero.setIcon(icon[2][temp]);
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		} else if (jbhero.getIcon().equals(hero4)) {
-			System.out.println("4");
+			temp = rnd.nextInt(2);
+			System.out.println("temp : " + temp);
+			jbhero.setIcon(icon[3][temp]);
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 		
 
